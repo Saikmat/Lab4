@@ -36,7 +36,7 @@ Food::Food(int numberOfSales) { // NOLINT(*-pro-type-member-init)
 
 /*
  * Constructor with all parameters
- * string requestedname - name of the item
+ * string requestedName - name of the item
  * int start - number of items in the initial inventory
  * int numberOfSales - the number of days that the product is sold
  */
