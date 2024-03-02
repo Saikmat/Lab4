@@ -161,6 +161,7 @@ void Food::showSales() {
  * Displays all available information about the object which it is called upon
  */
 void Food::display() {
+    calcEnd();
     cout << "Food Name: " << getName() << endl;
     cout << "Starting inventory: " << getStart() << endl;
     showSales();
