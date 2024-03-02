@@ -92,7 +92,7 @@ double Food::calcAvg() {
  * string passedName - sets this.name to the value entered
  */
 void Food::setName(string passedName) {
-    this.name = *passedName;
+    this->name = passedName;
 }
 
 /*
