@@ -6,6 +6,7 @@
  */
 #include <iostream>
 #include <string>
+#include <iomanip>
 #include "Food.h"
 
 
@@ -80,11 +81,11 @@ double Food::calcAvg() {
     if (numberOfDaysFoodIsSold == 0) { // Prevent div by 0 error
         return 0; // Allow implicit typecast
     }
-    double count = 0; // aggregator of count, double type to ensure double division
+    int count = 0;
     for (int i = 0; i < numberOfDaysFoodIsSold; ++i) {
         count += salesPerDay[i];
     }
-    return count / numberOfDaysFoodIsSold;
+    return count / (double) numberOfDaysFoodIsSold;
 }
 
 /*
@@ -177,6 +178,7 @@ void Food::display() {
     showSales();
     calcEnd();
     cout << "Final inventory amount: " << Food::getEnd() << endl;
+    cout << fixed << setprecision(1);
     cout << "The average sold each day is: " << calcAvg() << endl << endl;
 }
 
