@@ -85,7 +85,7 @@ double Food::calcAvg() {
     for (int i = 0; i < numberOfDaysFoodIsSold; ++i) {
         count += salesPerDay[i];
     }
-    return count / (double) numberOfDaysFoodIsSold;
+    return count / static_cast<double>(numberOfDaysFoodIsSold);
 }
 
 /*
